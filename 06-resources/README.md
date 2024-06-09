@@ -6,4 +6,4 @@ Steps for implementation:
 - [x] Deploy an EC2 instance inside of the created subnet and associate a public IP
 - [x] Associate a public IP and security group that allows public ingress
 - [x] Change the EC2 instance to use a publicy avaliable NGINX AMI
-- [x]] Destroy everything
+- [x] Destroy everything
