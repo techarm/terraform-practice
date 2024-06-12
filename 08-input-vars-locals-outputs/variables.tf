@@ -10,14 +10,31 @@ variable "ec2_instance_type" {
   }
 }
 
-variable "ec2_volume_size" {
-  type        = number
-  default     = 10
-  description = "Size of the EBS volume in gigabytes to be attached to the EC2 instance. Defaults to 10GB."
+# variable "ec2_volume_size" {
+#   type        = number
+#   default     = 10
+#   description = "Size of the EBS volume in gigabytes to be attached to the EC2 instance. Defaults to 10GB."
+# }
+
+# variable "ec2_volume_type" {
+#   type        = string
+#   default     = "gp3"
+#   description = "Type of the EBS volume to be created. Defaults to 'gp3' (General Purpose SSD)."
+# }
+
+variable "ec2_volume_config" {
+  type = object({
+    size = number
+    type = string
+  })
+  description = " Configuration for the EBS volume to be attached to the EC2 instance."
+  default = {
+    size = 10
+    type = "gp3"
+  }
 }
 
-variable "ec2_volume_type" {
-  type        = string
-  default     = "gp3"
-  description = "Type of the EBS volume to be created. Defaults to 'gp3' (General Purpose SSD)."
+variable "additional_tags" {
+  type    = map(string)
+  default = {}
 }
