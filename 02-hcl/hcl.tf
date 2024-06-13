@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
         source = "hashicorp/aws"
-        version = "5.37.0" // =, !=, >=, <=, >, <, ~>
+        version = "5.37.0" # =, !=, >=, <=, >, <, ~>
 
         # version = "~> 5.30.0"
         # version = ">5.1.0, < 5.30.0"
@@ -31,7 +31,7 @@ output "bucket_id" {
 }
 
 locals {
-    // local.local_example
+    # local.local_example
     local_example = "This is a local variable"
 }
 

@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
   })
 
   lifecycle {
-    // default is destroy_before_create
+    # default is destroy_before_create
     create_before_destroy = true
     # ignore_changes = [ tags ]
   }
