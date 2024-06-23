@@ -66,7 +66,7 @@ variable "credentials" {
     1. Contain at least 1 character
     2. Contain at least 1 digit
     3. Be at least 8 characters long
-    4. Contain only the following characters: a-z, A-Z, 0-9, +, _, ?, -, @
+    4. Contain only the following characters: a-z, A-Z, 0-9, +, _, ?, -
     EOT
   }
 }
